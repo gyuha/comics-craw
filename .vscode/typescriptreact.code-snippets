@@ -1,0 +1,59 @@
+{
+	"tsrfc": {
+    "prefix": "tsrfc",
+    "body": [
+      "import React from 'react';\r",
+      "\r",
+      "const ${1:${TM_FILENAME_BASE}} = () => {\r",
+      "  return (\r",
+      "    <div>\r",
+      "      \r",
+      "    </div>\r",
+      "  );\r",
+      "}\r",
+      "export default ${1:${TM_FILENAME_BASE}};\r",
+      "\r",
+      ""
+    ],
+    "description": "React Function component"
+  },
+	"tsrfcp": {
+		"prefix": "tsrfcp",
+    "body": [
+      "import React from 'react';\r",
+      "\r",
+      "type ${1:${TM_FILENAME_BASE}}Props = {\r",
+      "};\r",
+      "\r",
+      "const ${1:${TM_FILENAME_BASE}} = ({  }: ${1:${TM_FILENAME_BASE}}Props) => {\r",
+      "  return <div> </div>;\r",
+      "};\r",
+      "\r",
+      "${1:${TM_FILENAME_BASE}}.defaultProps = {} as ${1:${TM_FILENAME_BASE}}Props;\r",
+      "\r",
+      "export default ${1:${TM_FILENAME_BASE}};\r",
+      ""
+    ],
+    "description": "React Function component with props"
+	},
+  "tsrfcpc": {
+    "prefix": "tsrfcpc",
+    "body": [
+      "import React from 'react';\r",
+      "\r",
+      "type ${1:${TM_FILENAME_BASE}}Props = {\r",
+      "  children: React.ReactNode;\r",
+      "};\r",
+      "\r",
+      "const ${1:${TM_FILENAME_BASE}} = ({ children }: ${1:${TM_FILENAME_BASE}}Props) => {\r",
+      "  return <div>{children}</div>;\r",
+      "};\r",
+      "\r",
+      "${1:${TM_FILENAME_BASE}}.defaultProps = {} as ${1:${TM_FILENAME_BASE}}Props;\r",
+      "\r",
+      "export default ${1:${TM_FILENAME_BASE}};\r",
+      ""
+    ],
+    "description": "React Function component with children props"
+  }
+}
