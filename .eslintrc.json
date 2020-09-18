@@ -28,7 +28,8 @@
     "react",
     "@typescript-eslint",
     "prettier",
-    "react-hooks"
+    "react-hooks",
+    "simple-import-sort"
   ],
   "rules": {
     "prettier/prettier": [
