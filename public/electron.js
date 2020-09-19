@@ -8,20 +8,22 @@ let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: isDev ? 1400 : 900,
+    width: 900,
     height: 680,
     frame: false,
     transparent: true,
     webPreferences: {
       nodeIntegration: true,
       devTools: isDev,
-      enableRemoteModule: true
+      enableRemoteModule: true,
     },
   });
   mainWindow.loadURL(
     isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`
   );
-  isDev && mainWindow.webContents.openDevTools();
+  if (isDev) {
+    mainWindow.webContents.openDevTools({ mode: 'detach' });
+  }
   mainWindow.setResizable(true);
   mainWindow.on('closed', () => (mainWindow = null));
   mainWindow.focus();
