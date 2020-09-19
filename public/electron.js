@@ -15,6 +15,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       devTools: isDev,
+      enableRemoteModule: true
     },
   });
   mainWindow.loadURL(

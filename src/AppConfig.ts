@@ -1,6 +1,6 @@
-// @ts-ignore
-import { app } from 'electron';
 import Singleton from './libs/Singleton';
+
+// const { dialog } = remote;
 
 class AppConfig extends Singleton {
   // constructor() {
@@ -13,9 +13,10 @@ class AppConfig extends Singleton {
 
   a = 0;
 
-  add() {
+  async add() {
     this.a++;
-    console.log(app.getPath('home'), this.a);
+    // console.log(dialog.showOpenDialog({ properties: ['openFile', 'multiSelections'] }));
+    // console.log(app.getPath('home'), this.a);
     // fs.readFile(path.resolve(__dirname, './tsconfig.json'), 'utf-8', (err, data) => {
     //   if (err) {
     //     throw err;
