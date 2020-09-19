@@ -37,9 +37,7 @@ const MainLayout = () => {
       <TopBar />
       <div className={classes.wrapper}>
         <div className={classes.contentContainer}>
-          <div className={classes.content}>
-            <Outlet />
-          </div>
+          <div className={classes.content}>d</div>
         </div>
       </div>
     </div>

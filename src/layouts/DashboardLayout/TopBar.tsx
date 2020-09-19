@@ -2,10 +2,10 @@ import { AppBar, Badge, Box, Hidden, IconButton, makeStyles, Toolbar } from '@ma
 import InputIcon from '@material-ui/icons/Input';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/NotificationsOutlined';
-import Logo from '@src/components/Logo';
 import clsx from 'clsx';
 import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+import Logo from 'src/components/Logo';
 
 const useStyles = makeStyles(() => ({
   root: {},

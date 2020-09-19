@@ -21,18 +21,14 @@
       "jsx": true
     },
     "ecmaVersion": 2018,
-    "sourceType": "module",
-    "project": "./tsconfig.json",
-    "tsconfigRootDir": "./"
+    "sourceType": "module"
   },
   "plugins": [
     "jest",
     "react",
     "@typescript-eslint",
     "prettier",
-    "react-hooks",
-    "import",
-    "simple-import-sort"
+    "react-hooks"
   ],
   "rules": {
     "prettier/prettier": [
