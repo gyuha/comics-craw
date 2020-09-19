@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 type TopBarProps = {
-  className: string;
+  className?: string;
   onMobileNavOpen: () => void;
 };
 

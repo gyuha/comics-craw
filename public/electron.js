@@ -7,10 +7,20 @@ const isDev = require('electron-is-dev');
 let mainWindow;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({ width: 900, height: 680, frame: false, transparent: true });
+  mainWindow = new BrowserWindow({
+    width: isDev ? 1400 : 900,
+    height: 680,
+    frame: false,
+    transparent: true,
+    webPreferences: {
+      nodeIntegration: true,
+      devTools: isDev,
+    },
+  });
   mainWindow.loadURL(
     isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`
   );
+  isDev && mainWindow.webContents.openDevTools();
   mainWindow.setResizable(true);
   mainWindow.on('closed', () => (mainWindow = null));
   mainWindow.focus();
