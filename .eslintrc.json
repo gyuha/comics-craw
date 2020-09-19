@@ -21,7 +21,9 @@
       "jsx": true
     },
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
   },
   "plugins": [
     "jest",
@@ -29,6 +31,7 @@
     "@typescript-eslint",
     "prettier",
     "react-hooks",
+    "import",
     "simple-import-sort"
   ],
   "rules": {
@@ -81,7 +84,8 @@
           ".ts",
           ".tsx"
         ]
-      }
+      },
+      "typescript": {}
     }
   }
 }
