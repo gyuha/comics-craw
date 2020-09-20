@@ -3,7 +3,7 @@ import React from 'react';
 import { Navigate } from 'react-router';
 import MainLayout from './layouts/MainLayout/index';
 import ManatokiLayout from './layouts/ManatokiLayout/index';
-import ManatokiComics from './views/manatoki/ManatokiComics';
+import ManatokiComicsView from './views/manatoki/ManatokiComicsView';
 
 const routes = [
   {
@@ -16,7 +16,7 @@ const routes = [
         children: [
           {
             path: 'comics',
-            element: <ManatokiComics />,
+            element: <ManatokiComicsView />,
           },
           {
             path: '*',

@@ -1,7 +1,8 @@
-// eslint-disable-next-line
 import { makeStyles } from '@material-ui/core';
-import React from 'react';
+// eslint-disable-next-line
+import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import NavBar from '../AppLayout/NavBar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,25 +35,14 @@ const useStyles = makeStyles((theme) => ({
 
 const ManatokiLayout = () => {
   const classes = useStyles();
-  // const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
     <div className={classes.root}>
-      asdf
-      <br />
-      asdf
-      <br />
-      asdf
-      <br />
-      asdf
-      <br />
-      asdf
-      <br />
-      {/* <NavBar onMobileClose={() => setMobileNavOpen(false)} openMobile={isMobileNavOpen} /> */}
+      <NavBar onMobileClose={() => setMobileNavOpen(false)} openMobile={isMobileNavOpen} />
       <div className={classes.wrapper}>
         <div className={classes.contentContainer}>
           <div className={classes.content}>
-            <div style={{ width: '300px', height: '300px', backgroundColor: 'red' }} />
             <Outlet />
           </div>
         </div>

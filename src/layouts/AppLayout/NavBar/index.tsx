@@ -9,6 +9,7 @@ import {
   makeStyles,
   Typography,
 } from '@material-ui/core';
+// eslint-disable-next-line
 import React, { useEffect } from 'react';
 import {
   FiAlertCircle as AlertCircleIcon,

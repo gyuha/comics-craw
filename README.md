@@ -1,6 +1,7 @@
 ## 참고 링크
 * [Material Design for react](https://material-ui.com/)
 * [React icons](https://react-icons.github.io/react-icons/) : 아이콘 종합선물 세트
+* [Electron seamless titlebar tutorial (Windows 10 style)](https://github.com/binaryfunt/electron-seamless-titlebar-tutorial)
 
 ## Available Scripts
 
