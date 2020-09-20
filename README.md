@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 참고 링크
+* [Material Design for react](https://material-ui.com/)
+* [React icons](https://react-icons.github.io/react-icons/) : 아이콘 종합선물 세트
 
 ## Available Scripts
 

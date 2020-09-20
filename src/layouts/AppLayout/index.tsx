@@ -1,23 +1,25 @@
-// eslint-disable-next-line
-import React from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core';
+import NavBar from './NavBar';
 import TopBar from './TopBar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.background.default,
+    // backgroundColor: theme.palette.background.dark,
     display: 'flex',
-    height: '100vh',
+    height: '100%',
     overflow: 'hidden',
     width: '100%',
-    borderRadius: '10px',
   },
   wrapper: {
     display: 'flex',
     flex: '1 1 auto',
     overflow: 'hidden',
     paddingTop: 64,
+    [theme.breakpoints.up('lg')]: {
+      paddingLeft: 256,
+    },
   },
   contentContainer: {
     display: 'flex',
@@ -31,19 +33,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MainLayout = () => {
+const AppLayout = () => {
   const classes = useStyles();
-  const { pathname } = useLocation();
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
     <div className={classes.root}>
-      <TopBar />
+      <TopBar onMobileNavOpen={() => setMobileNavOpen(true)} />
+      <NavBar onMobileClose={() => setMobileNavOpen(false)} openMobile={isMobileNavOpen} />
       <div className={classes.wrapper}>
         <div className={classes.contentContainer}>
           <div className={classes.content}>
-            {pathname}
             <Outlet />
-            ddd
           </div>
         </div>
       </div>
@@ -51,4 +52,4 @@ const MainLayout = () => {
   );
 };
 
-export default MainLayout;
+export default AppLayout;
